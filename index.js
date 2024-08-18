@@ -5,7 +5,9 @@ const port = process.env.PORT || 5000;
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 
-app.use(cors())
+app.use(cors({
+    origin:['https://sortify-client.web.app/','http://localhost:5173']
+}))
 app.use(express.json())
 
 const uri = "mongodb+srv://arifhossainaslam6:6tDFpGkPmA6UjPiG@cluster0.bxt1x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
